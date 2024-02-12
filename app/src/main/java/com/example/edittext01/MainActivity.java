@@ -22,6 +22,23 @@ public class MainActivity extends AppCompatActivity {
     Button check;
     Button clear;
 //lvl2
+    TextView anslevel1;
+    TextView num3;
+    EditText answer2;
+    ImageView xpic2;
+    ImageView vpic2;
+    Button check2;
+    //lvl3
+    TextView anslvl2;
+    TextView num4;
+    EditText answerlvl3;
+    ImageView xpic3;
+    ImageView vpic3;
+    Button check3;
+
+
+
+
     TextView level1ans;
     @SuppressLint("SetTextI18n")
     @Override
@@ -38,10 +55,27 @@ public class MainActivity extends AppCompatActivity {
         clear= (Button) findViewById(R.id.clear);
         final int random1 = new Random().nextInt(89) + 10;
         final int random2 = new Random().nextInt(89) + 10;
+        final int random3 = new Random().nextInt(89) + 10;
+        final int random4 = new Random().nextInt(89) + 10;
 
         num1.setText(Integer.toString(random1));
         num2.setText(Integer.toString(random2));
         //level2
+        anslevel1 = findViewById(R.id.anslvl1);
+        num3 = findViewById(R.id.number2lvl2);
+        answer2 = (EditText) findViewById(R.id.answerlvl2);
+        xpic2 = (ImageView) findViewById(R.id.xpiclvl2);
+        vpic2 = (ImageView) findViewById(R.id.vpiclvl2);
+        check2 = (Button) findViewById(R.id.checklvl2);
+        num3.setText(Integer.toString(random3));
+
+        anslvl2 = findViewById(R.id.anslvl2);
+        num4 = findViewById(R.id.numberr2lvl3);
+        answerlvl3 = (EditText) findViewById(R.id.answerlvl3);
+        xpic3 = (ImageView) findViewById(R.id.xpic3);
+        vpic3 = (ImageView) findViewById(R.id.vpic3);
+        check3 = (Button) findViewById(R.id.checklvl3);
+        num4.setText(Integer.toString(random4));
 
 
 
@@ -65,6 +99,68 @@ public class MainActivity extends AppCompatActivity {
         }else{
             xpic.setVisibility(View.VISIBLE);
         }
+        String NUMBER3 = num3.getText().toString();
+        int number3 =  Integer.parseInt(NUMBER3);
+        int finalans1 = number1+number2;
+        String finalans = String.valueOf(finalans1);
+        anslevel1.setText(finalans);
+        anslevel1.setVisibility(View.VISIBLE);
+        num3.setVisibility(View.VISIBLE);
+        answer2.setVisibility(View.VISIBLE);
+        check2.setVisibility(View.VISIBLE);
 
+
+
+    }
+
+
+    public void change2(View view) {
+        String NUMBER1 = num1.getText().toString();
+        int number1 =  Integer.parseInt(NUMBER1);
+        String NUMBER2 = num2.getText().toString();
+        int number2 =  Integer.parseInt(NUMBER2);
+        String NUMBER3 = num3.getText().toString();
+        int number3 =  Integer.parseInt(NUMBER3);
+        int finalans1 = number1+number2;
+        String str = answer2.getText().toString();
+        int ans = Integer.parseInt(str);
+        if(ans == finalans1 + number3){
+            vpic2.setVisibility(View.VISIBLE);
+        }else{
+            xpic2.setVisibility(View.VISIBLE);
+        }
+        String NUMBER4 = num4.getText().toString();
+        int number4 =  Integer.parseInt(NUMBER4);
+        int finalans2 = number3+finalans1;
+        String finalans = String.valueOf(finalans2);
+        anslvl2.setText(finalans);
+        anslvl2.setVisibility(View.VISIBLE);
+        num4.setVisibility(View.VISIBLE);
+        answerlvl3.setVisibility(View.VISIBLE);
+        check3.setVisibility(View.VISIBLE);
+
+
+
+
+    }
+
+    public void change3(View view) {
+        String NUMBER1 = num1.getText().toString();
+        int number1 =  Integer.parseInt(NUMBER1);
+        String NUMBER2 = num2.getText().toString();
+        int number2 =  Integer.parseInt(NUMBER2);
+        int finalans1 = number1+number2;
+        String NUMBER3 = num3.getText().toString();
+        int number3 =  Integer.parseInt(NUMBER3);
+        int finalans2 = number3+finalans1;
+        String NUMBER4 = num4.getText().toString();
+        int number4 =  Integer.parseInt(NUMBER4);
+        String str = answerlvl3.getText().toString();
+        int ans = Integer.parseInt(str);
+        if(ans == finalans2 + number4){
+            vpic3.setVisibility(View.VISIBLE);
+        }else{
+            xpic3.setVisibility(View.VISIBLE);
+        }
     }
 }

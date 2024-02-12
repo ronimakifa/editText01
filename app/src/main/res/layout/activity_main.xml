@@ -7,12 +7,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/vpiclvl5"
+        android:layout_width="48dp"
+        android:layout_height="84dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578"
+        app:srcCompat="@drawable/v" />
+
+    <ImageView
+        android:id="@+id/vpiclvl"
+        android:layout_width="48dp"
+        android:layout_height="84dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578"
+        app:srcCompat="@drawable/v" />
+
+    <ImageView
+        android:id="@+id/vpiclvl2"
+        android:layout_width="48dp"
+        android:layout_height="84dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573"
+        app:srcCompat="@drawable/v" />
+
     <TextView
         android:id="@+id/anslvl1"
         android:layout_width="94dp"
         android:layout_height="55dp"
         android:text="answer"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,10 +81,23 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.575"
+        app:srcCompat="@drawable/download__2_" />
+
+    <ImageView
+        android:id="@+id/xpic3"
+        android:layout_width="51dp"
+        android:layout_height="81dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
         app:srcCompat="@drawable/download__2_" />
 
     <TextView
@@ -75,19 +127,6 @@
         app:layout_constraintVertical_bias="0.092" />
 
     <ImageView
-        android:id="@+id/lvl3truefalse"
-        android:layout_width="98dp"
-        android:layout_height="85dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578"
-        app:srcCompat="@drawable/download__2_" />
-
-    <ImageView
         android:id="@+id/xpiclvl2"
         android:layout_width="49dp"
         android:layout_height="77dp"
@@ -95,17 +134,31 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.571"
         app:srcCompat="@drawable/download__2_" />
+
+    <ImageView
+        android:id="@+id/vpiclvl4"
+        android:layout_width="48dp"
+        android:layout_height="84dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578"
+        app:srcCompat="@drawable/v" />
 
     <Button
         android:id="@+id/checklvl2"
         android:layout_width="95dp"
         android:layout_height="52dp"
         android:text="check"
+        android:onClick="change2"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,7 +227,7 @@
         android:ems="10"
         android:hint="sum"
         android:visibility="invisible"
-        android:inputType="numberPassword"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
@@ -188,7 +241,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:visibility="invisible"
-        android:inputType="numberPassword"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.867"
@@ -197,10 +250,11 @@
         app:layout_constraintVertical_bias="0.409" />
 
     <Button
-        android:id="@+id/revealanslvl3"
+        android:id="@+id/checklvl3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="check"
+        android:onClick="change3"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -237,15 +291,15 @@
         app:srcCompat="@drawable/v" />
 
     <ImageView
-        android:id="@+id/vlvl2"
+        android:id="@+id/vpic3"
         android:layout_width="48dp"
         android:layout_height="84dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintHorizontal_bias="0.887"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.573"
+        app:layout_constraintVertical_bias="0.578"
         app:srcCompat="@drawable/v" />
 </androidx.constraintlayout.widget.ConstraintLayout>
